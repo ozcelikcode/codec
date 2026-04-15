@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Conversion Complete - The Technical Atelier</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#c6d3ff",
+                        "surface-container-high": "#e3e9ec",
+                        "on-surface-variant": "#586064",
+                        "on-tertiary-fixed": "#3f3a54",
+                        "secondary-fixed": "#e4e2e6",
+                        "surface-dim": "#d1dce0",
+                        "secondary-dim": "#535356",
+                        "tertiary-container": "#e3dbfd",
+                        "on-error": "#fff7f6",
+                        "on-secondary-fixed": "#3f3f43",
+                        "secondary-container": "#e4e2e6",
+                        "on-primary-container": "#004ab9",
+                        "on-secondary": "#faf8fc",
+                        "error-dim": "#4e0309",
+                        "tertiary-fixed": "#e3dbfd",
+                        "on-surface": "#2b3437",
+                        "background": "#f8f9fa",
+                        "tertiary-fixed-dim": "#d5cdee",
+                        "inverse-surface": "#0c0f10",
+                        "surface-container-highest": "#dbe4e7",
+                        "secondary": "#5f5f62",
+                        "on-error-container": "#752121",
+                        "on-secondary-fixed-variant": "#5b5b5f",
+                        "on-primary": "#f8f7ff",
+                        "on-primary-fixed-variant": "#0253cd",
+                        "outline": "#737c7f",
+                        "error-container": "#fe8983",
+                        "on-background": "#2b3437",
+                        "inverse-on-surface": "#9b9d9e",
+                        "primary-fixed": "#dae2ff",
+                        "primary-container": "#dae2ff",
+                        "secondary-fixed-dim": "#d5d4d8",
+                        "surface-bright": "#f8f9fa",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#524c68",
+                        "surface-tint": "#0c56d0",
+                        "tertiary-dim": "#554f6b",
+                        "on-tertiary-fixed-variant": "#5c5672",
+                        "primary-dim": "#004aba",
+                        "surface-variant": "#dbe4e7",
+                        "surface-container-low": "#f1f4f6",
+                        "tertiary": "#615b77",
+                        "inverse-primary": "#5c8bff",
+                        "error": "#9f403d",
+                        "on-tertiary": "#fcf7ff",
+                        "on-secondary-container": "#515155",
+                        "surface-container": "#eaeff1",
+                        "on-primary-fixed": "#003993",
+                        "surface": "#f8f9fa",
+                        "outline-variant": "#abb3b7",
+                        "primary": "#0c56d0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .success-gradient {
+            background: linear-gradient(135deg, #0c56d0 0%, #004ab9 100%);
+        }
+        .paper-shadow {
+            shadow-[0px_12px_32px_rgba(43,52,55,0.06)];
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#f8f9fa]/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0px_12px_32px_rgba(43,52,55,0.06)]">
+<div class="flex items-center justify-between px-8 py-4 max-w-7xl mx-auto">
+<span class="text-xl font-bold tracking-tighter text-[#2b3437] dark:text-slate-100 font-headline">The Technical Atelier</span>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#2b3437]/70 dark:text-slate-400 font-medium hover:text-[#0c56d0] transition-colors duration-300 font-['Manrope'] tracking-tight" href="#">Tools</a>
+<a class="text-[#2b3437]/70 dark:text-slate-400 font-medium hover:text-[#0c56d0] transition-colors duration-300 font-['Manrope'] tracking-tight" href="#">Library</a>
+<a class="text-[#2b3437]/70 dark:text-slate-400 font-medium hover:text-[#0c56d0] transition-colors duration-300 font-['Manrope'] tracking-tight" href="#">Guide</a>
+</div>
+<button class="bg-[#0c56d0] text-[#f8f7ff] px-5 py-2 rounded-xl font-semibold transition-all active:scale-95 shadow-[0px_12px_32px_rgba(12,86,208,0.15)]">Sign In</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-32 pb-20 px-6 flex flex-col items-center justify-center max-w-4xl mx-auto w-full">
+<!-- Success Animation State -->
+<div class="mb-12 text-center">
+<div class="inline-flex items-center justify-center w-24 h-24 rounded-full bg-primary-container mb-6">
+<span class="material-symbols-outlined text-primary text-5xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<h1 class="font-headline text-4xl md:text-5xl font-bold tracking-tight text-on-surface mb-3">Conversion Complete</h1>
+<p class="text-on-surface-variant font-body text-lg max-w-md mx-auto leading-relaxed">Your assets have been processed with professional precision and are ready for retrieval.</p>
+</div>
+<!-- Result Summary Bento Card -->
+<div class="w-full grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+<!-- Main Result Summary -->
+<div class="md:col-span-2 bg-surface-container-lowest rounded-xl p-8 shadow-[0px_12px_32px_rgba(43,52,55,0.06)] flex flex-col justify-between overflow-hidden relative">
+<div class="relative z-10">
+<span class="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold font-label uppercase tracking-widest mb-4">Final Report</span>
+<h2 class="font-headline text-3xl font-bold text-on-surface mb-2">84% Efficiency Gain</h2>
+<p class="text-on-surface-variant text-sm">Aggressive compression without perceptual loss.</p>
+</div>
+<div class="mt-8 flex items-end gap-4 relative z-10">
+<div class="flex-1">
+<div class="text-xs font-label text-outline mb-1">Original Size</div>
+<div class="text-xl font-semibold text-on-surface">142.4 MB</div>
+</div>
+<div class="w-px h-10 bg-outline-variant/20"></div>
+<div class="flex-1">
+<div class="text-xs font-label text-primary mb-1">Optimized Size</div>
+<div class="text-xl font-semibold text-primary">22.8 MB</div>
+</div>
+</div>
+<!-- Abstract Visual Decoration -->
+<div class="absolute -right-8 -bottom-8 w-48 h-48 opacity-10">
+<span class="material-symbols-outlined text-[160px] text-primary">data_object</span>
+</div>
+</div>
+<!-- Format & Status Card -->
+<div class="bg-surface-container-low rounded-xl p-8 flex flex-col items-center justify-center text-center shadow-[0px_12px_32px_rgba(43,52,55,0.06)]">
+<div class="w-16 h-16 bg-surface-container-highest rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-on-surface-variant text-3xl">image</span>
+</div>
+<div class="text-xs font-label text-outline mb-1 uppercase tracking-widest">New Format</div>
+<div class="text-2xl font-bold font-headline text-on-surface mb-2">AVIF</div>
+<div class="text-xs bg-primary-container text-on-primary-container px-2 py-0.5 rounded font-bold tracking-tight">12 FILES SUCCESS</div>
+</div>
+</div>
+<!-- Action Area -->
+<div class="w-full flex flex-col md:flex-row gap-4 items-center justify-center">
+<button class="w-full md:w-auto min-w-[240px] px-8 py-4 success-gradient text-on-primary rounded-xl font-bold font-headline text-lg shadow-[0px_12px_32px_rgba(12,86,208,0.2)] transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-3">
+<span class="material-symbols-outlined">download_for_offline</span>
+                Download All
+            </button>
+<button class="w-full md:w-auto px-8 py-4 bg-surface-container-highest text-on-surface rounded-xl font-bold font-headline text-lg transition-all hover:bg-surface-container-high active:scale-[0.98] flex items-center justify-center gap-3">
+<span class="material-symbols-outlined">add_photo_alternate</span>
+                Convert More
+            </button>
+</div>
+<!-- Preview Strip -->
+<div class="mt-16 w-full opacity-60 hover:opacity-100 transition-opacity duration-500">
+<div class="flex items-center justify-between mb-4 px-2">
+<span class="text-xs font-label text-outline uppercase tracking-widest">Session Batch Preview</span>
+<span class="text-xs font-label text-outline">12 of 12 complete</span>
+</div>
+<div class="flex gap-4 overflow-hidden">
+<div class="w-24 h-24 flex-shrink-0 rounded-xl bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="minimalist architecture detail of clean concrete lines and shadows in bright daylight with high contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhwExHbdCQn_ypqUkikxrRSKjFWTpkAFCGtU1FlPy1Cdl4Ro5zX48fPTpk3tAIVGXgUuNZmcdugi6EdrsBXgj9HHCSg_zwRZ52L_7hSBbcRWnLPqUVz1qT0883sF6UUcQgZ0XOhf6OIpNrqN9WBITofie_Iko1h_0ttZjETMcx-dzMEhvh7pLPdeFTRFppskqSqbtLVpEoZzmOGAGIG-10o1qsnpqRjOAcqQ3uZLfKYqtppX9we3IkRmMqwX24hnap6wUIb623nPN-"/>
+</div>
+<div class="w-24 h-24 flex-shrink-0 rounded-xl bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="vibrant abstract gradient flowing between deep blue and light violet colors with smooth texture and soft light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRIulQN_faGCO-r3gz8VTdTjx-rH0GTPgcXXD3rQeCke0zsiLaI07KXrnZ534j6UWpVOy8kco8NXC6tsl0Rhe3fZ4U9w4BHYQKEaZRmvlHImXi7xJao9Wrj5Pzs8iarZbHNoTGHRRnCoImZVJjdFPiLkj0cl4LBXTJrUeWCpvjZFEXo778_hsOZIbSnSbiFodL6zW-LxCUbZfOWKRp9t4GMdn4OspWSgmShb9qkiCugJAzK04cWBGwysV6h3Si7_wjz3WswBRG3v6a"/>
+</div>
+<div class="w-24 h-24 flex-shrink-0 rounded-xl bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="monochrome professional studio shot of high-end camera lens with detailed glass reflections and metal texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrl_2NBbjZXWdhXuLya6uO_IaV4KxAzmp9MjpmSdB_q-KnZ9J2mPsYKFOLxx6WvBUjxTo4ufIkQS5uFaJh7aXuzYpjxsj7awOhsrHuBgKtVCPVuQRPFdwUHBVlGmgY6P_AZJa0h6zh8c6bnKGR24X32WJ9paRL8vW5o3laXlYiaONyQVlguEG7Dd_HRTVl9KjXYpSF9UcovAFGzKhl0ar8kddALuYpS7nWP2nFoBhlaRCQ3T54aDyFNCaA64XzoyzQlccNxuMGTQMN"/>
+</div>
+<div class="w-24 h-24 flex-shrink-0 rounded-xl bg-surface-container-highest overflow-hidden hidden md:block">
+<img class="w-full h-full object-cover" data-alt="abstract geometric composition of 3D shapes with soft pastel colors and professional studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwF3VrA9LVx7oj2vdWlt46xI5977a7Zv6B7nofLAXyldwtUrjNbO6Rqcql_CdqsxmhnhIwK0NBDugcj6gicKYW94m5hcHggsiqdXPrzuZbKlxuycKYGrBwVkbbNvob7pHTsEL3GdZGbVbtzJB0nrAgx2kv9tsrGiJDhtuGF-5jXjI80Sy5_MJEx4zt1VfA6pRRJSs3kB09gnhuQrqP9BAzntLklAVCw1-wyLkttAgDQ-08-XTqwJPlJFM6dNTPdWH12un9yA49xO2W"/>
+</div>
+<div class="w-24 h-24 flex-shrink-0 rounded-xl bg-surface-container-highest flex items-center justify-center">
+<span class="text-on-surface-variant font-bold">+8</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 mt-auto bg-[#f1f4f6] dark:bg-slate-950">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 gap-6 max-w-7xl mx-auto">
+<div class="flex flex-col gap-2 items-center md:items-start">
+<span class="font-['Manrope'] font-semibold text-[#2b3437] text-lg">The Technical Atelier</span>
+<p class="font-['Inter'] text-sm leading-relaxed text-[#2b3437]/60 dark:text-slate-500">© 2024 The Technical Atelier. Professional Grade Precision.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-[#2b3437]/60 dark:text-slate-500 font-['Inter'] text-sm hover:text-[#2b3437] dark:hover:text-slate-200 transition-colors" href="#">Privacy Policy</a>
+<a class="text-[#2b3437]/60 dark:text-slate-500 font-['Inter'] text-sm hover:text-[#2b3437] dark:hover:text-slate-200 transition-colors" href="#">Terms of Service</a>
+<a class="text-[#2b3437]/60 dark:text-slate-500 font-['Inter'] text-sm hover:text-[#2b3437] dark:hover:text-slate-200 transition-colors" href="#">API Documentation</a>
+<a class="text-[#2b3437]/60 dark:text-slate-500 font-['Inter'] text-sm hover:text-[#2b3437] dark:hover:text-slate-200 transition-colors text-[#0c56d0] underline" href="#">Support</a>
+</div>
+</div>
+</footer>
+</body></html>

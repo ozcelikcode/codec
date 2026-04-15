@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Technical Atelier | Professional Image Codec Conversion</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#c6d3ff",
+                        "surface-container-high": "#e3e9ec",
+                        "on-surface-variant": "#586064",
+                        "on-tertiary-fixed": "#3f3a54",
+                        "secondary-fixed": "#e4e2e6",
+                        "surface-dim": "#d1dce0",
+                        "secondary-dim": "#535356",
+                        "tertiary-container": "#e3dbfd",
+                        "on-error": "#fff7f6",
+                        "on-secondary-fixed": "#3f3f43",
+                        "secondary-container": "#e4e2e6",
+                        "on-primary-container": "#004ab9",
+                        "on-secondary": "#faf8fc",
+                        "error-dim": "#4e0309",
+                        "tertiary-fixed": "#e3dbfd",
+                        "on-surface": "#2b3437",
+                        "background": "#f8f9fa",
+                        "tertiary-fixed-dim": "#d5cdee",
+                        "inverse-surface": "#0c0f10",
+                        "surface-container-highest": "#dbe4e7",
+                        "secondary": "#5f5f62",
+                        "on-error-container": "#752121",
+                        "on-secondary-fixed-variant": "#5b5b5f",
+                        "on-primary": "#f8f7ff",
+                        "on-primary-fixed-variant": "#0253cd",
+                        "outline": "#737c7f",
+                        "error-container": "#fe8983",
+                        "on-background": "#2b3437",
+                        "inverse-on-surface": "#9b9d9e",
+                        "primary-fixed": "#dae2ff",
+                        "primary-container": "#dae2ff",
+                        "secondary-fixed-dim": "#d5d4d8",
+                        "surface-bright": "#f8f9fa",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#524c68",
+                        "surface-tint": "#0c56d0",
+                        "tertiary-dim": "#554f6b",
+                        "on-tertiary-fixed-variant": "#5c5672",
+                        "primary-dim": "#004aba",
+                        "surface-variant": "#dbe4e7",
+                        "surface-container-low": "#f1f4f6",
+                        "tertiary": "#615b77",
+                        "inverse-primary": "#5c8bff",
+                        "error": "#9f403d",
+                        "on-tertiary": "#fcf7ff",
+                        "on-secondary-container": "#515155",
+                        "surface-container": "#eaeff1",
+                        "on-primary-fixed": "#003993",
+                        "surface": "#f8f9fa",
+                        "outline-variant": "#abb3b7",
+                        "primary": "#0c56d0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-[#f8f9fa]/80 glass-nav shadow-[0px_12px_32px_rgba(43,52,55,0.06)]">
+<div class="flex items-center justify-between px-8 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-8">
+<a class="text-xl font-bold tracking-tighter text-[#2b3437] font-headline" href="/">The Technical Atelier</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-[#0c56d0] font-semibold border-b-2 border-[#0c56d0] font-label transition-all active:scale-95" href="#">Tools</a>
+<a class="text-[#2b3437]/70 font-medium font-label hover:text-[#0c56d0] transition-colors duration-300" href="#">Library</a>
+<a class="text-[#2b3437]/70 font-medium font-label hover:text-[#0c56d0] transition-colors duration-300" href="#">Guide</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-5 py-2 text-[#0c56d0] font-semibold hover:bg-primary-container/30 rounded-xl transition-all active:scale-95">Sign In</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-32 pb-24 px-6">
+<div class="max-w-4xl mx-auto text-center">
+<!-- Hero Header -->
+<div class="mb-16">
+<h1 class="font-headline text-5xl md:text-7xl font-bold tracking-tighter text-on-surface mb-6">
+                    The Digital <span class="text-primary italic">Darkroom.</span>
+</h1>
+<p class="font-body text-lg text-on-surface-variant max-w-xl mx-auto leading-relaxed">
+                    Professional Image Codec Conversion. Precision processing for HEIC, AVIF, and RAW formats with bit-perfect accuracy.
+                </p>
+</div>
+<!-- Upload Area Section -->
+<div class="relative group">
+<!-- Background Decorative Element -->
+<div class="absolute -inset-4 bg-primary-container/20 blur-3xl opacity-50 group-hover:opacity-70 transition-opacity rounded-[2rem]"></div>
+<!-- Main Upload Card -->
+<div class="relative bg-surface-container-lowest p-12 rounded-xl shadow-[0px_12px_32px_rgba(43,52,55,0.06)] border border-outline-variant/10">
+<div class="flex flex-col items-center justify-center border-2 border-dashed border-outline-variant/30 rounded-xl py-24 px-8 transition-all hover:border-primary/40 hover:bg-surface-container-low/50 group-interaction cursor-pointer">
+<div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 0;">upload_file</span>
+</div>
+<h2 class="font-headline text-2xl font-semibold mb-2">Drop your masters here</h2>
+<p class="text-on-surface-variant font-body mb-8">Support for HEIC, AVIF, WebP, and RAW formats.</p>
+<div class="flex flex-wrap justify-center gap-3 mb-10">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase font-label">HEIC</span>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase font-label">AVIF</span>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase font-label">RAW</span>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase font-label">SVG</span>
+</div>
+<button class="bg-gradient-to-br from-primary to-on-primary-container text-on-primary px-8 py-3.5 rounded-xl font-label font-semibold shadow-lg hover:shadow-xl hover:translate-y-[-2px] transition-all active:scale-95">
+                            Upload images
+                        </button>
+</div>
+</div>
+</div>
+<!-- Features Bento-lite Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-24 text-left">
+<div class="p-8 bg-surface-container-low rounded-xl">
+<span class="material-symbols-outlined text-primary mb-4">high_quality</span>
+<h3 class="font-headline font-semibold text-lg mb-2">Lossless Precision</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Advanced algorithms ensure zero detail loss during format transitions.</p>
+</div>
+<div class="p-8 bg-surface-container-low rounded-xl">
+<span class="material-symbols-outlined text-primary mb-4">bolt</span>
+<h3 class="font-headline font-semibold text-lg mb-2">Batch Velocity</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Process entire galleries in seconds with multi-threaded cloud optimization.</p>
+</div>
+<div class="p-8 bg-surface-container-low rounded-xl">
+<span class="material-symbols-outlined text-primary mb-4">security</span>
+<h3 class="font-headline font-semibold text-lg mb-2">Privacy First</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Your data never persists. Files are wiped immediately after the session ends.</p>
+</div>
+</div>
+<!-- Aesthetic Placeholder Image -->
+<div class="mt-24 rounded-xl overflow-hidden shadow-xl aspect-[21/9]">
+<img alt="Professional Camera" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Close-up of a professional camera lens with intricate glass reflections in a minimalist bright studio setting with soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBegTscS91e1UyLoVgu7mczsRvwuoo_4b5wSszrMPiIL7duY-5f74qd8dxI0sn5fYdLvLO6LzHTdoTL1ZIlxBMAC78IAk3YPVB66JXTEue6iacBgKuMeh_rUOxo684q0yZJivKk77TWMKX9181VB2ZMQKbCf40BVYo-W0_4YBxLz4IBVoCTNitff1Ar1_DVnZozyjBvchFQkp1FfQ_TsNN3cAV_VOFQyitN9kYTIpfN5liaJbqWWLQ8-ji_6lNBP6yvg1ThI9iQ_jnN"/>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 mt-auto bg-[#f1f4f6] dark:bg-slate-950">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 gap-6 max-w-7xl mx-auto font-body text-sm leading-relaxed">
+<div class="flex flex-col gap-2 items-center md:items-start">
+<p class="font-['Manrope'] font-semibold text-[#2b3437]">The Technical Atelier</p>
+<p class="text-[#2b3437]/60 dark:text-slate-500">© 2024 The Technical Atelier. Professional Grade Precision.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-[#2b3437]/60 dark:text-slate-500 hover:text-[#2b3437] transition-colors duration-300" href="#">Privacy Policy</a>
+<a class="text-[#2b3437]/60 dark:text-slate-500 hover:text-[#2b3437] transition-colors duration-300" href="#">Terms of Service</a>
+<a class="text-[#2b3437]/60 dark:text-slate-500 hover:text-[#2b3437] transition-colors duration-300" href="#">API Documentation</a>
+<a class="text-[#2b3437]/60 dark:text-slate-500 hover:text-[#2b3437] transition-colors duration-300" href="#">Support</a>
+</div>
+</div>
+</footer>
+</body></html>
