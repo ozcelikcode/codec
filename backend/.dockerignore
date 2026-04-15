@@ -1,0 +1,9 @@
+node_modules
+dist
+.tmp
+npm-debug.log*
+.git
+.gitignore
+memory-bank
+tests
+coverage

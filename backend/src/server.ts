@@ -20,7 +20,15 @@ const bootstrap = async () => {
     port: env.PORT
   });
 
-  logger.info({ host: env.HOST, port: env.PORT }, "Codec backend started");
+  logger.info(
+    {
+      host: env.HOST,
+      port: env.PORT,
+      apiPrefix: env.API_PREFIX,
+      legacyRoutesEnabled: env.LEGACY_UNVERSIONED_ROUTES_ENABLED
+    },
+    "Codec backend started"
+  );
 };
 
 bootstrap().catch((error) => {

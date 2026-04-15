@@ -1,6 +1,8 @@
 export type ErrorCode =
   | "VALIDATION_ERROR"
   | "NOT_FOUND"
+  | "UNAUTHORIZED"
+  | "RATE_LIMITED"
   | "UNSUPPORTED_CODEC"
   | "PAYLOAD_TOO_LARGE"
   | "PROCESSING_ERROR"

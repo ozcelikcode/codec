@@ -7,6 +7,8 @@
 - Sharp/libvips for image operations
 - Zod for payload validation
 - Pino for structured logging
+- Vitest + Supertest for automated API integration tests
+- Docker multi-stage image for deployment
 
 ## Constraints
 - v1 uses local ephemeral filesystem.
@@ -17,3 +19,5 @@
 - Env-driven file count and size limits.
 - Retention TTL cleanup loop.
 - Correlation-friendly request IDs via Fastify.
+- API version prefix defaults to /api/v1 with configurable legacy aliases.
+- API key auth and rate-limit middleware are feature-flagged via env.

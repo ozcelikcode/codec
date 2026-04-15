@@ -40,6 +40,8 @@ const parseList = (value: string | undefined, fallback: string[]): string[] => {
 
 export const env = {
   NODE_ENV: process.env.NODE_ENV ?? "development",
+  API_PREFIX: process.env.API_PREFIX ?? "/api/v1",
+  LEGACY_UNVERSIONED_ROUTES_ENABLED: parseBoolean(process.env.LEGACY_UNVERSIONED_ROUTES_ENABLED, true),
   PORT: parseNumber(process.env.PORT, 8080),
   HOST: process.env.HOST ?? "0.0.0.0",
   LOG_LEVEL: process.env.LOG_LEVEL ?? "info",
@@ -62,5 +64,10 @@ export const env = {
   TEMP_DIR: process.env.TEMP_DIR ?? ".tmp",
   RETENTION_MINUTES: parseNumber(process.env.RETENTION_MINUTES, 60),
   QUEUE_CONCURRENCY: parseNumber(process.env.QUEUE_CONCURRENCY, 2),
-  PRESERVE_METADATA_DEFAULT: parseBoolean(process.env.PRESERVE_METADATA_DEFAULT, true)
+  PRESERVE_METADATA_DEFAULT: parseBoolean(process.env.PRESERVE_METADATA_DEFAULT, true),
+  ENABLE_API_KEY_AUTH: parseBoolean(process.env.ENABLE_API_KEY_AUTH, false),
+  API_KEY: process.env.API_KEY ?? "",
+  ENABLE_RATE_LIMIT: parseBoolean(process.env.ENABLE_RATE_LIMIT, false),
+  RATE_LIMIT_WINDOW_MS: parseNumber(process.env.RATE_LIMIT_WINDOW_MS, 60_000),
+  RATE_LIMIT_MAX_REQUESTS: parseNumber(process.env.RATE_LIMIT_MAX_REQUESTS, 120)
 } as const;

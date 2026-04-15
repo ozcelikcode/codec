@@ -10,6 +10,8 @@ import type { ConversionOptions, UploadedAsset } from "../../domain/types.js";
 import { AppError } from "../../shared/errors.js";
 import { sendSuccess } from "../../shared/http.js";
 import { detectInputCodec } from "../../shared/codec.js";
+import { ensureAuthorized } from "../middleware/auth.js";
+import { enforceRateLimit } from "../middleware/rateLimit.js";
 
 interface RouteDeps {
   jobService: JobService;
@@ -18,11 +20,13 @@ interface RouteDeps {
 }
 
 export const registerConversionRoutes = (app: FastifyInstance<any, any, any, any>, deps: RouteDeps) => {
+  const protectedPreHandlers = [enforceRateLimit, ensureAuthorized];
+
   app.get("/health", async (request, reply) => {
     return sendSuccess(reply, request.id, { status: "ok" });
   });
 
-  app.post("/upload", async (request, reply) => {
+  app.post("/upload", { preHandler: protectedPreHandlers }, async (request, reply) => {
     if (!request.isMultipart()) {
       throw new AppError("VALIDATION_ERROR", "Expected multipart form-data", 400);
     }
@@ -107,7 +111,7 @@ export const registerConversionRoutes = (app: FastifyInstance<any, any, any, any
     }
   });
 
-  app.post("/convert", async (request, reply) => {
+  app.post("/convert", { preHandler: protectedPreHandlers }, async (request, reply) => {
     const parsed = convertRequestSchema.parse(request.body);
 
     if (!env.SUPPORTED_OUTPUT_CODECS.includes(parsed.targetCodec)) {
@@ -137,7 +141,10 @@ export const registerConversionRoutes = (app: FastifyInstance<any, any, any, any
     );
   });
 
-  app.get<{ Params: { id: string } }>("/status/:id", async (request, reply) => {
+  app.get<{ Params: { id: string } }>(
+    "/status/:id",
+    { preHandler: protectedPreHandlers },
+    async (request, reply) => {
     const job = deps.jobService.getJobOrThrow(request.params.id);
 
     return sendSuccess(reply, request.id, {
@@ -151,9 +158,13 @@ export const registerConversionRoutes = (app: FastifyInstance<any, any, any, any
       errorMessage: job.errorMessage,
       files: job.convertedAssets.length > 0 ? job.convertedAssets : job.uploadedAssets
     });
-  });
+    }
+  );
 
-  app.get<{ Params: { id: string } }>("/download/:id", async (request, reply) => {
+  app.get<{ Params: { id: string } }>(
+    "/download/:id",
+    { preHandler: protectedPreHandlers },
+    async (request, reply) => {
     const job = deps.jobService.getJobOrThrow(request.params.id);
 
     if (job.status !== "completed") {
@@ -187,5 +198,6 @@ export const registerConversionRoutes = (app: FastifyInstance<any, any, any, any
     reply.header("Content-Type", "application/zip");
 
     return reply.send(createReadStream(zip.zipPath));
-  });
+    }
+  );
 };
